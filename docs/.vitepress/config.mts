@@ -35,8 +35,8 @@ export default defineConfig({
     lastUpdatedText: "Последнее обновление",
     outlineTitle: "На этой странице",
     docFooter: {
-      prev: "Предыдущая страница",
-      next: "Следующая страница",
+      prev: false,
+      next: false,
     },
   },
 });

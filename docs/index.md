@@ -18,11 +18,12 @@ hero:
   #     link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Git
+    details: позволяет эффективно управлять версиями кода и совместной работой над проектами
+  - title: CI/CD
+    details: автоматизирует процессы тестирования и доставки приложений, ускоряя разработку
+  - title: VPS
+    details: предоставляет выделенные ресурсы для размещения приложений и сервисов в интернете
+  - title: Docker
+    details: упрощает создание и развёртывание приложений в изолированных контейнерах
 ---
-
