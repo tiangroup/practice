@@ -3,8 +3,15 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/practice/",
+  lang: "ru-RU",
   title: "Практика",
   description: "A VitePress Site",
+  locales: {
+		root: {
+			label: "Русский",
+			lang: "ru",
+		},
+	},
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
