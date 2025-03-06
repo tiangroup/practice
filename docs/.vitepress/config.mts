@@ -16,16 +16,16 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       // { text: 'Home', link: '/' },
-      { text: "Материалы", link: "/materials" },
+      { text: "Руководство", link: "/guide/git", activeMatch: "/guide/" },
       { text: "Ссылки", link: "/links" },
     ],
 
     sidebar: [
       {
-        text: "Examples",
+        text: "Руководство",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
+          { text: "Git", link: "/guide/git" },
+          { text: "VPS", link: "/guide/vps" },
         ],
       },
     ],
@@ -33,7 +33,7 @@ export default defineConfig({
     // socialLinks: [],
 
     lastUpdatedText: "Последнее обновление",
-    outlineTitle: "На этой странице",
+    outlineTitle: "Содержание страницы",
     docFooter: {
       prev: false,
       next: false,
