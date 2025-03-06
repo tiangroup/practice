@@ -1,9 +1,3 @@
-<script setup>
-if (import.meta.env.PROD) {
-  window.location.href = '/';
-}
-</script>
-
 # VPS
 
 ## Начало работы с VPS

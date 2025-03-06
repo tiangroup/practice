@@ -25,7 +25,10 @@ export default defineConfig({
         text: "Руководство",
         items: [
           { text: "Git", link: "/guide/git" },
-          { text: "VPS", link: "/guide/vps" },
+          // { text: "VPS", link: "/guide/vps" },
+          ...(process.env.NODE_ENV !== "production"
+            ? [{ text: "VPS", link: "/guide/vps" }]
+            : []),
         ],
       },
     ],
