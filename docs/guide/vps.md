@@ -46,7 +46,7 @@ curl -fsSL https://get.docker.com | sudo bash
 Добавляем текущего пользователя в группу `docker`:
 
 ```sh
-sudo usermod -aG docker $USER
+sudo usermod -aG docker username
 ```
 
 Чтобы изменения вступили в силу, выходим и снова входим в систему:
