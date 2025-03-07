@@ -26,9 +26,9 @@ export default defineConfig({
         items: [
           { text: "Git", link: "/guide/git" },
           { text: "VPS", link: "/guide/vps" },
-          // ...(process.env.NODE_ENV !== "production"
-          //   ? [{ text: "VPS", link: "/guide/vps" }]
-          //   : []),
+          ...(process.env.NODE_ENV !== "production"
+            ? [{ text: "Стек сайта", link: "/guide/compose" }]
+            : []),
         ],
       },
     ],
