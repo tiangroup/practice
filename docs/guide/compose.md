@@ -3,7 +3,7 @@
 Создаем папку для докер стеков:
 
 ```sh
-mkdir stacks
+mkdir ~/stacks
 cd stacks
 ```
 
@@ -94,7 +94,7 @@ MYSQL_DATABASE=mysite
 
 Нажимаем `CTRL+O` для сохранения и `CTRL+X` для выхода из редактора.
 
-Нужно в docker создать внешнюю сеть `web`:
+Нужно в докере создать внешнюю сеть `web`:
 
 ```sh
 docker network create web
