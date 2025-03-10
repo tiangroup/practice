@@ -28,7 +28,13 @@ export default defineConfig({
           { text: "Установка VPS", link: "/guide/vps" },
           { text: "Стек сайта", link: "/guide/compose" },
           ...(process.env.NODE_ENV !== "production"
-            ? [{ text: "Nginx Proxy Manager", link: "/guide/npm" }]
+            ? [
+                { text: "Nginx Proxy Manager", link: "/guide/npm" },
+                {
+                  text: "Деплой",
+                  items: [{ text: "Деплой сайта", link: "/guide/php-deploy" }],
+                },
+              ]
             : []),
         ],
       },
