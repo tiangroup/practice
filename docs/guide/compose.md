@@ -50,7 +50,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - 8080:80
+      - 8081:80
     environment:
       - PMA_HOST=mysql
       - UPLOAD_LIMIT="150M"
@@ -59,7 +59,7 @@ services:
       - host
 
   php:
-    image: php:8.3-apache
+    image: tiangroup/php:8.3
     restart: always
     ports:
       - 8080:80
@@ -107,3 +107,48 @@ docker compose up -d
 ```
 
 Можно проверить работу наших сервисов, для этого открываем в браузере для своего ip адреса `http://178.248.37.68:8080` для сайта и `http://178.248.37.68:8081` для phpMyAdmin.
+
+Добавим файл на сайт:
+
+```sh
+nano html/index.php
+```
+
+Вставим следующее содержимое:
+
+```php
+<?php
+$servername = "mysql";
+$username = "mysite";
+$password = "Ovmj1yvFil6QEl";
+$database = "mysite";
+
+$conn = new mysqli($servername, $username, $password, $database);
+
+if ($conn->connect_error) {
+    die("Ошибка подключения: " . $conn->connect_error);
+}
+
+$sql = "SELECT name FROM goods";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<ul>";
+    while ($row = $result->fetch_assoc()) {
+        echo "<li>" . htmlspecialchars($row["name"]) . "</li>";
+    }
+    echo "</ul>";
+} else {
+    echo "Нет данных";
+}
+
+$conn->close();
+?>
+
+```
+
+Остановить работу стека сайта можно следующей командой:
+
+```sh
+docker compose down
+```

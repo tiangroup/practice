@@ -26,11 +26,9 @@ export default defineConfig({
         items: [
           { text: "Инициализация Git", link: "/guide/git" },
           { text: "Установка VPS", link: "/guide/vps" },
+          { text: "Стек сайта", link: "/guide/compose" },
           ...(process.env.NODE_ENV !== "production"
-            ? [
-                { text: "Стек сайта", link: "/guide/compose" },
-                { text: "Nginx Proxy Manager", link: "/guide/npm" },
-              ]
+            ? [{ text: "Nginx Proxy Manager", link: "/guide/npm" }]
             : []),
         ],
       },
