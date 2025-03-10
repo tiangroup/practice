@@ -26,13 +26,15 @@ export default defineConfig({
         items: [
           { text: "Инициализация Git", link: "/guide/git" },
           { text: "Установка VPS", link: "/guide/vps" },
-          { text: "Стек сайта", link: "/guide/compose" },
+          { text: "Стек сайта на PHP", link: "/guide/compose" },
           ...(process.env.NODE_ENV !== "production"
             ? [
                 { text: "Nginx Proxy Manager", link: "/guide/npm" },
                 {
-                  text: "Деплой",
-                  items: [{ text: "Деплой сайта", link: "/guide/php-deploy" }],
+                  text: "CI/CD",
+                  items: [
+                    { text: "Деплой сайта на PHP", link: "/guide/php-deploy" },
+                  ],
                 },
               ]
             : []),
