@@ -85,8 +85,6 @@ Dockerfile
 Создаём в проекте файл `.github/workflows/main.yml` со следующим содержимым:
 
 ```yaml
-name: Deploy Python Service
-
 on:
   push:
     branches:
@@ -104,17 +102,23 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Deploy via rsync
+      - name: Copy via rsync
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ vars.SERVER_HOST }} >> ~/.ssh/known_hosts
           rsync -av --delete --exclude=".env" --exclude=".git/" --exclude=".github/" ./ ${{ vars.SERVER_USER }}@${{ vars.SERVER_HOST }}:~/stacks/python/app/
-          ssh -i ~/.ssh/id_rsa ${{ vars.SERVER_USER }}@${{ vars.SERVER_HOST }} << 'EOF'
+
+      - name: Docker build
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ vars.SERVER_HOST }}
+          username: ${{ vars.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
             cd ~/stacks/python
             docker compose up --build -d
-          EOF
 ```
 
 Блок **on** указывает, при каких событиях должен запускаться workflow:
