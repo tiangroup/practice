@@ -34,6 +34,10 @@ export default defineConfig({
                   text: "CI/CD",
                   items: [
                     { text: "Деплой сайта на PHP", link: "/guide/php-deploy" },
+                    {
+                      text: "Деплой сервиса на Python",
+                      link: "/guide/python-deploy",
+                    },
                   ],
                 },
               ]
