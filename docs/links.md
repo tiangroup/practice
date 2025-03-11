@@ -16,6 +16,8 @@ sidebar: false
 
 [VDSka](https://vdska.ru/page/vds-servera/)
 
+[One Dash](https://rdp-onedash.ru/) - 7 дней за 49₽
+
 ### DNS
 
 [DNSExit](https://dnsexit.com) - бесплатные доменные имена, dns хостинг
