@@ -175,3 +175,7 @@ cat ~/.ssh/github_deploy
 8. В поле **Name** указываем: `SERVER_USER`
 9. В поле **Value** указываем имя нашего пользователя на сервере
 10. Нажимаем на **Add variable**
+
+## Проект
+
+[https://github.com/tiangroup/practice-flask](https://github.com/tiangroup/practice-flask)
