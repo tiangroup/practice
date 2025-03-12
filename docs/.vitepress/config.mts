@@ -12,6 +12,12 @@ export default defineConfig({
       lang: "ru",
     },
   },
+  head: [
+    [
+      "link",
+      { rel: "icon", type: "image/png", href: "/practice/favicon-x2.png" },
+    ],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
