@@ -17,7 +17,7 @@ nano docker-compose.yml
 
 ```yaml
 services:
-  app:
+  npm:
     image: "jc21/nginx-proxy-manager:latest"
     restart: unless-stopped
     ports:

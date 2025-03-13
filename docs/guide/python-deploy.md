@@ -27,6 +27,7 @@ nano docker-compose.yml
 services:
   app:
     build: app
+    hostname: python # изменяет сетевое имя контейнера
     restart: always
     ports:
       - 5000:5000
