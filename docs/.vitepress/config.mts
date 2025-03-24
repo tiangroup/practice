@@ -44,7 +44,19 @@ export default defineConfig({
               },
             ],
           },
-          ...(process.env.NODE_ENV !== "production" ? [] : []),
+          ...(process.env.NODE_ENV !== "production"
+            ? [
+                {
+                  text: "Приложения",
+                  items: [
+                    {
+                      text: "Менеджер паролей Vaultwarden",
+                      link: "/guide/vaultwarden",
+                    },
+                  ],
+                },
+              ]
+            : []),
         ],
       },
     ],
