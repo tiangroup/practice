@@ -97,7 +97,7 @@ docker compose down && docker compose up -d
 Установим [Rclone](https://rclone.org/)
 
 ```sh
-curl https://rclone.org/install.sh | sudo bash
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
 ```
 
 Создадим конфигурация для копирование в облачный сервис:
@@ -223,10 +223,11 @@ crontab -e
 Вставляем строчку для исполнения каждые 4 минуты
 
 ```
-*/4 * * * * /home/pav/stacks/vaultwarden/backup.sh > /dev/null 2>&1
+*/4 * * * * /home/username/stacks/vaultwarden/backup.sh > /dev/null 2>&1
 ```
 
 ## Ссылки
 
 - [Vaultwarden](https://github.com/dani-garcia/vaultwarden)
 - [Vaultwarden backup](https://github.com/ttionya/vaultwarden-backup)
+- [Crontab калькулятор](https://crontab.online/ru/)
