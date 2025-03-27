@@ -42,6 +42,7 @@ export default defineConfig({
                 text: "Деплой сервиса на Python",
                 link: "/guide/python-deploy",
               },
+              { text: "Деплой на Netlify", link: "/guide/netlify" },
             ],
           },
           {
