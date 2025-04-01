@@ -70,6 +70,8 @@ npm run docs:dev
 
 ```
 node_modules
+docs/.vitepress/dist
+docs/.vitepress/cache
 ```
 
 Создаём репозиторий, добавляем файлы в Git и загружаем их на GitHub:
