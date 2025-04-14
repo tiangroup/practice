@@ -109,3 +109,4 @@ services:
 - Нажимаем **Package settings** (справа вверху).
 - В разделе **Danger Zone** находим "Change visibility".
 - Выбираем **Public**.
+
