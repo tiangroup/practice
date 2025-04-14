@@ -43,6 +43,7 @@ export default defineConfig({
                 link: "/guide/python-deploy",
               },
               { text: "Деплой на Netlify", link: "/guide/netlify" },
+              { text: "Деплой через докер образ", link: "/guide/image-deploy" },
             ],
           },
           {
