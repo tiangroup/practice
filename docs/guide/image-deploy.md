@@ -71,7 +71,7 @@ jobs:
 Секреты GitHub (в `Settings > Secrets and variables > Actions`):
 
 - `SSH_PRIVATE_KEY ` — приватный SSH ключ (в формате OpenSSH)
-- `GHCR_TOKEN` — [токен с правами на `write:packages` и `read:packages`](https://github.com/settings/tokens)
+- `GHCR_TOKEN` — [токен с правами на `write:packages` и `read:packages`](https://github.com/settings/tokens) -> [Generate new token (classic)](https://github.com/settings/tokens/new)
 
 Переменные в GitHub (в `Settings > Secrets and variables > Actions`):
 
