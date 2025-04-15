@@ -2,10 +2,10 @@
 
 Сделаем GitHub Actions workflow, который будет:
 
-1. Собирать Docker-образ.   
-2. Пушить его в GitHub Container Registry (GHCR).   
-3. Заходить на целевой сервер по SSH.   
-4. Делать `docker pull` образа с GHCR.   
+1. Собирать Docker-образ.
+2. Пушить его в GitHub Container Registry (GHCR).
+3. Заходить на целевой сервер по SSH.
+4. Делать `docker pull` образа с GHCR.
 5. Перезапускать `docker-compose`.
 
 ## Настройка GitHub Actions
@@ -66,7 +66,6 @@ jobs:
             cd ~/stacks/python
             docker compose down
             docker compose up -d
-
 ```
 
 Секреты GitHub (в `Settings > Secrets and variables > Actions`):
@@ -77,13 +76,13 @@ jobs:
 Переменные в GitHub (в `Settings > Secrets and variables > Actions`):
 
 - `SERVER_HOST` — ip адрес сервера
-- `SERVER_USER`  — имя пользователя
+- `SERVER_USER` — имя пользователя
 
 ## Docker-compose
 
 На сервере соответственно по следующему пути должен быть файл `~/stacks/python/docker-compose.yml`
 
-```yaml
+```yaml{3}
 services:
   app:
     image: ghcr.io/tiangroup/practice-flask:latest
@@ -102,7 +101,7 @@ services:
 1. Найти нужный пакет на GitHub
 
 - Переходим в `https://github.com/OWNER`, заменим `OWNER` на свой логин или организацию.
-- Открываем вкладку **Packages** 
+- Открываем вкладку **Packages**
 - Выбираем нужный Docker-образ.
 
 2. Изменить видимость образа
@@ -110,4 +109,3 @@ services:
 - Нажимаем **Package settings** (справа вверху).
 - В разделе **Danger Zone** находим "Change visibility".
 - Выбираем **Public**.
-
